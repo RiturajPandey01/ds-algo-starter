@@ -12,6 +12,7 @@ class FirstUniqueCharTest {
 		assertEquals(1,FirstUniqueChar.firstUniqueChar("room"));
 		assertEquals(2,FirstUniqueChar.firstUniqueChar("barber"));
 		assertEquals(-1,FirstUniqueChar.firstUniqueChar("aabbcc"));
+		assertEquals(3,FirstUniqueChar.firstUniqueChar("aassddf"));
 	}
 
 }
