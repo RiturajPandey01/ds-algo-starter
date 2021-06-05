@@ -4,7 +4,6 @@ plugins {
     kotlin("jvm")
     id("com.adarshr.test-logger") version "3.0.0"
     id("io.gitlab.arturbosch.detekt") version "1.16.0"
-    id("com.diffplug.spotless") version "5.12.5"
     application
 }
 
@@ -16,10 +15,6 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.microutils:kotlin-logging:+")
-    runtimeOnly("org.apache.logging.log4j:log4j-core:+")
-    runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:+")
-
     // Junit
     testImplementation(platform("org.junit:junit-bom:+"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
@@ -53,9 +48,9 @@ tasks {
 testlogger {
     setTheme("mocha")
     showExceptions = true
-    showStackTraces = true
-    showFullStackTraces = true
-    showCauses = true
+    showStackTraces = false
+    showFullStackTraces = false
+    showCauses = false
     slowThreshold = 2000
     showSummary = true
     showSimpleNames = true
@@ -66,20 +61,4 @@ testlogger {
     showPassedStandardStreams = true
     showSkippedStandardStreams = true
     showFailedStandardStreams = true
-}
-
-spotless {
-    kotlin {
-        // by default the target is every '.kt' and '.kts` file in the java sourcesets
-        ktlint("0.41.0")
-    }
-    kotlinGradle {
-        target("*.gradle.kts")
-        ktlint("0.41.0")
-    }
-    java {
-        importOrder()
-        googleJavaFormat()
-        removeUnusedImports()
-    }
 }
