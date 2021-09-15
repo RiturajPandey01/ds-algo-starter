@@ -33,3 +33,6 @@ _Note: Below setup can be done in your free time. Don't get blocked by this. You
 - Get rid of IDEs and use a text editor. Personal recommendation: [VS Code](https://code.visualstudio.com/download)
   - Setup [Java development on VS Code](https://code.visualstudio.com/docs/languages/java)
   - Install this [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=fwcd.kotlin) for writing tests in Kotlin
+
+
+[![Gitter](https://badges.gitter.im/egnite-oss/community.svg)](https://gitter.im/egnite-oss/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
